@@ -1,0 +1,20 @@
+node_modules
+coverage
+.next
+.env
+.DS_Store
+out
+
+# editor config
+.vscode
+
+#amplify
+build/
+dist/
+node_modules/
+aws-exports.js
+awsconfiguration.json
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
