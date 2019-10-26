@@ -1,7 +1,9 @@
 const Index = () => (
-  <div>
-    <p>Hello visitor</p>
-  </div>
+  <main>
+    <div>
+      <p>Hello visitor</p>
+    </div>
+  </main>
 );
 
 export default Index;
