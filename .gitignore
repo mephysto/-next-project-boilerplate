@@ -12,6 +12,7 @@ out
 build/
 dist/
 node_modules/
+public/
 aws-exports.js
 awsconfiguration.json
 # Elastic Beanstalk Files
