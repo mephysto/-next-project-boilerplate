@@ -1,13 +1,10 @@
 import App from "next/app";
 import React from "react";
 import Page from "../components/Page";
-import { usePageTracking } from "../components/ga";
 import Router from "next/router";
 import withGA from "next-ga";
 
-
 class MyApp extends App {
-
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
     if (Component.getInitialProps) {
@@ -20,6 +17,7 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
+    console.log("i am appjs", process.env.REACT_APP_TRACKINGID);
     return (
       <Page>
         <Component {...pageProps} />
@@ -27,4 +25,4 @@ class MyApp extends App {
     );
   }
 }
-export default withGA("UA-150977759-1", Router)(MyApp);
+export default withGA(process.env.REACT_APP_TRACKINGID, Router)(MyApp);
